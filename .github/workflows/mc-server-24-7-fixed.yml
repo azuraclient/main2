@@ -30,6 +30,29 @@ jobs:
         
     - name: Setup Rust
       uses: dtolnay/rust-toolchain@stable
+
+    # ─── TAILSCALE ────────────────────────────────────────────────────────────
+    - name: Install Tailscale
+      run: |
+        curl -fsSL https://tailscale.com/install.sh | sh
+
+    - name: Start Tailscale
+      env:
+        TAILSCALE_AUTHKEY: ${{ secrets.TAILSCALE_AUTHKEY }}
+      run: |
+        # --advertise-tags is optional; remove if you don't use ACL tags
+        sudo tailscale up \
+          --authkey="$TAILSCALE_AUTHKEY" \
+          --hostname="minecraft-github-server" \
+          --accept-routes \
+          --ssh \
+          || true
+        
+        # Print Tailscale IP so it shows in the run log
+        echo "=== Tailscale IP ==="
+        tailscale ip -4
+        echo "Players on your Tailnet can connect to: $(tailscale ip -4):25565"
+    # ─────────────────────────────────────────────────────────────────────────
       
     - name: Cache Minecraft data (FIXED)
       uses: actions/cache@v4
@@ -171,6 +194,8 @@ jobs:
           # Use ss instead of netstat (more reliable)
           if ss -tlnp | grep :25565 > /dev/null; then
             echo "Minecraft server is ready!"
+            echo "=== Connection info ==="
+            echo "  Tailscale : $(tailscale ip -4):25565"
             break
           fi
           echo "Attempt $i: Server not ready yet..."
@@ -248,12 +273,25 @@ jobs:
             echo $! > craftip.pid
             cd "$WORK_DIR"
           fi
+
+          # ── Tailscale watchdog ──────────────────────────────────────────
+          if ! tailscale status --json 2>/dev/null | grep -q '"BackendState":"Running"'; then
+            echo "Tailscale is down, reconnecting..."
+            sudo tailscale up \
+              --authkey="${{ secrets.TAILSCALE_AUTHKEY }}" \
+              --hostname="minecraft-github-server" \
+              --accept-routes \
+              || true
+          fi
+          # ───────────────────────────────────────────────────────────────
           
           # Show status every 10 minutes
           if [ $(($(date +%s) % 600)) -lt 30 ]; then
             echo "=== Status Check ==="
             echo "Minecraft PID: $(cat "$WORK_DIR/minecraft-data/minecraft.pid" 2>/dev/null || echo 'Not found')"
             echo "CraftIP PID: $(cat "$WORK_DIR/craftip/craftip.pid" 2>/dev/null || echo 'Not found')"
+            echo "Tailscale IP: $(tailscale ip -4 2>/dev/null || echo 'Not connected')"
+            echo "Tailscale status: $(tailscale status --peers=false 2>/dev/null | head -1)"
             ss -tlnp | grep :25565 || echo "Port 25565 not listening"
             
             echo "=== Server Files Status ==="
