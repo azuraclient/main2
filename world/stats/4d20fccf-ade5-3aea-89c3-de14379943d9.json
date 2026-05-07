@@ -1,61 +1,10 @@
 {
   "stats": {
-    "minecraft:mined": {
-      "minecraft:decorated_pot": 1
-    },
-    "minecraft:killed": {
-      "minecraft:slime": 2,
-      "minecraft:zombie": 1
-    },
-    "minecraft:custom": {
-      "minecraft:damage_resisted": 390,
-      "minecraft:time_since_rest": 21982,
-      "minecraft:walk_one_cm": 235180,
-      "minecraft:leave_game": 10,
-      "minecraft:walk_under_water_one_cm": 300,
-      "minecraft:mob_kills": 3,
-      "minecraft:damage_taken": 3850,
-      "minecraft:play_time": 230306,
-      "minecraft:damage_dealt": 541,
-      "minecraft:jump": 740,
-      "minecraft:time_since_death": 21974,
-      "minecraft:drop": 6,
-      "minecraft:sprint_one_cm": 101598,
-      "minecraft:fall_one_cm": 11635,
-      "minecraft:total_world_time": 230306,
-      "minecraft:fly_one_cm": 864358,
-      "minecraft:walk_on_water_one_cm": 4163,
-      "minecraft:crouch_one_cm": 14913,
-      "minecraft:sneak_time": 5796,
-      "minecraft:deaths": 19,
-      "minecraft:player_kills": 1
-    },
-    "minecraft:picked_up": {
-      "minecraft:wooden_axe": 1,
-      "minecraft:stick": 1,
-      "minecraft:oak_fence": 2,
-      "minecraft:gold_ingot": 180,
-      "minecraft:emerald_block": 1,
-      "minecraft:oak_planks": 64,
-      "minecraft:chest": 1,
-      "minecraft:decorated_pot": 1,
-      "minecraft:iron_ingot": 759,
-      "minecraft:quartz_slab": 1,
-      "minecraft:rotten_flesh": 3,
-      "minecraft:quartz_block": 1
-    },
-    "minecraft:dropped": {
-      "minecraft:rotten_flesh": 3,
-      "minecraft:blue_wool": 182
-    },
-    "minecraft:killed_by": {
-      "minecraft:player": 14
-    },
     "minecraft:used": {
       "minecraft:diamond_block": 13,
       "minecraft:oak_fence": 15,
       "minecraft:oak_trapdoor": 1,
-      "minecraft:grass_block": 50,
+      "minecraft:grass_block": 51,
       "minecraft:string": 30,
       "minecraft:wildflowers": 46,
       "minecraft:emerald_block": 7,
@@ -78,7 +27,7 @@
       "minecraft:oak_log": 10,
       "minecraft:cobblestone": 56,
       "minecraft:tinted_glass": 28,
-      "minecraft:barrier": 316,
+      "minecraft:barrier": 328,
       "minecraft:white_carpet": 47,
       "minecraft:spruce_trapdoor": 1,
       "minecraft:dandelion": 6,
@@ -104,6 +53,62 @@
       "minecraft:quartz_stairs": 145,
       "minecraft:flower_pot": 1,
       "minecraft:bedrock": 1
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 390,
+      "minecraft:time_since_rest": 29428,
+      "minecraft:walk_one_cm": 242061,
+      "minecraft:leave_game": 11,
+      "minecraft:walk_under_water_one_cm": 300,
+      "minecraft:mob_kills": 3,
+      "minecraft:damage_taken": 3850,
+      "minecraft:play_time": 237752,
+      "minecraft:damage_dealt": 541,
+      "minecraft:jump": 851,
+      "minecraft:time_since_death": 29420,
+      "minecraft:drop": 13,
+      "minecraft:sprint_one_cm": 115287,
+      "minecraft:fall_one_cm": 13535,
+      "minecraft:total_world_time": 237752,
+      "minecraft:fly_one_cm": 908343,
+      "minecraft:walk_on_water_one_cm": 4362,
+      "minecraft:crouch_one_cm": 15355,
+      "minecraft:sneak_time": 5975,
+      "minecraft:deaths": 19,
+      "minecraft:player_kills": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:stick": 2,
+      "minecraft:oak_planks": 64,
+      "minecraft:decorated_pot": 1,
+      "minecraft:iron_ingot": 762,
+      "minecraft:quartz_slab": 1,
+      "minecraft:rotten_flesh": 3,
+      "minecraft:quartz_block": 1,
+      "minecraft:wooden_axe": 1,
+      "minecraft:oak_fence": 2,
+      "minecraft:gold_ingot": 204,
+      "minecraft:emerald_block": 1,
+      "minecraft:chest": 1,
+      "minecraft:barrier": 1
+    },
+    "minecraft:killed_by": {
+      "minecraft:player": 14
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 2,
+      "minecraft:zombie": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:rotten_flesh": 3,
+      "minecraft:iron_ingot": 6,
+      "minecraft:blue_wool": 182,
+      "minecraft:barrier": 1,
+      "minecraft:gold_ingot": 48,
+      "minecraft:stick": 2
+    },
+    "minecraft:mined": {
+      "minecraft:decorated_pot": 1
     }
   },
   "DataVersion": 4671
