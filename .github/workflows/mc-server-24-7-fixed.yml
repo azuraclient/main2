@@ -351,6 +351,10 @@ jobs:
         done
         
         echo "Monitoring loop completed after $LOOP_COUNTER iterations"
+    - name: Remove Tailscale node on exit
+      if: always()
+      run: |
+        sudo tailscale logout || true
         
     - name: Save server files to repository
       if: always()  # Runs even if previous steps failed
