@@ -75,7 +75,7 @@ jobs:
     - name: Download Minecraft Server
       run: |
         if [ ! -f minecraft-data/server.jar ]; then
-          wget https://github.com/azuraclient/MinecraftConsoles/releases/download/s/server.jar \
+          wget https://github.com/lazych/main2/releases/download/dwwa/server.jar \
             -O minecraft-data/server.jar
         fi
         
