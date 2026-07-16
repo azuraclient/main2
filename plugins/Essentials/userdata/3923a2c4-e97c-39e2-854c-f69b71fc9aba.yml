@@ -11,15 +11,15 @@ powertoolsenabled: true
 accepting-pay: true
 baltop-exempt: false
 timestamps:
-  lastteleport: 1777224564778
+  lastteleport: 0
   lastheal: 0
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1784229984314
-  login: 1784229983083
+  logout: 1784231519119
+  login: 1784231518288
 money: '0'
-last-account-name: Polye
+last-account-name: Macariver1
 logoutlocation:
   world: 53c65316-1835-4d75-a9b5-356aa765e564
   world-name: world
@@ -28,11 +28,3 @@ logoutlocation:
   z: 577.345781446635
   yaw: -83.0994873046875
   pitch: 6.268420696258545
-lastlocation:
-  world: 53c65316-1835-4d75-a9b5-356aa765e564
-  world-name: world
-  x: 51.5925167800845
-  y: 64.0
-  z: 576.6754215514857
-  yaw: -79.41848754882812
-  pitch: 39.89520263671875
