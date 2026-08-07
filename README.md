@@ -6,3 +6,6 @@ Since using play it in codespace or in actions is now blocked(using it wont work
 Join the Practice server we have bedwars, skywars, and hvh
 
 IP: its on actions since craftip gives you a random ip every machine
+
+
+and yes this was made in ai im too lazy
